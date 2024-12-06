@@ -19,7 +19,11 @@ const Root = () => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            console.log(data);
+            if(data.insertedId){
+                alert('User has been added successfully!');
+                form.reset();
+            }
         })
     }
     return (
